@@ -49,8 +49,6 @@ job('Example') {
           --build-arg SONAR_TOKEN=${SONAR_TOKEN} \
           --build-arg SONAR_PROJECT_KEY=${SONAR_PROJECT_KEY} \
           --build-arg PROJECT_NAME=${PROJECT_NAME} .
-    '''))
+      ''')
   }
-
-
 }
