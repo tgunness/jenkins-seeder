@@ -1,4 +1,4 @@
-job('TrishanFeedTest') {
+job('SonarAnalysisExample') {
   description 'SonarQube analysis'
   properties {
         githubProjectUrl 'https://github.com/CareerCruising/Xello.Feed.API/'
