@@ -18,7 +18,10 @@ job('Example') {
         credentials 'github_ccbuilds'
       }
       branch 'refs/heads/main'
-    }
-      
+    }      
   }
+  triggers {
+    githubPush()
+  }
+
 }
