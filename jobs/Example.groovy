@@ -1,7 +1,12 @@
+def githubProjectUrl = 'https://github.com/tgunness/jenkins-seeder'
+def gitUrl = 'https://github.com/tgunness/jenkins-seeder.git'
+def branch = 'refs/heads/main'
+
+
 job('Example') {
   description 'SonarQube analysis'
   properties {
-        githubProjectUrl 'https://github.com/tgunness/jenkins-seeder'
+        githubProjectUrl githubProjectUrl
   }
   logRotator {
     numToKeep 20
@@ -11,10 +16,10 @@ job('Example') {
   scm {
     git {
       remote {
-        url 'https://github.com/tgunness/jenkins-seeder.git'
+        url gitUrl
         credentials 'github_ccbuilds'
       }
-      branch 'refs/heads/main'
+      branch branch
     }      
   }
   triggers {
