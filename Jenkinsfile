@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Seed jobs') {
             steps {
-                jobDsl  targets: ['*.groovy'].join('\n')
+                jobDsl  targets: ['jobs/*.groovy'].join('\n')
             }
         }
     }

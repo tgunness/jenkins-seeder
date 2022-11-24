@@ -1,0 +1,18 @@
+jenkins:
+  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code plugin\n\n"
+jobs:
+    - script: >
+        pipelineJob("Seeder Project") {
+        definition {
+            cpsScm {
+                scm {
+                    git{
+                      remote {
+                        url("https://github.com/tgunness/jenkins-seeder.git")
+                      }
+                      branch("*/seeder-init")
+                    }
+                }
+            }
+          }
+        }
