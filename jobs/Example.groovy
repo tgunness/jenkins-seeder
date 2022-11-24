@@ -8,9 +8,6 @@ job('Example') {
   }
   label 'linux-docker'
   concurrentBuild false
-  steps {
-    batchFile('echo Hello World!')
-  }
   scm {
     git {
       remote {
@@ -23,5 +20,20 @@ job('Example') {
   triggers {
     githubPush()
   }
+  wrappers {
+        credentialsBinding {
+            string('GITHUB_TOKEN', 'github_ccbuilds')
+            string('SONAR_TOKEN', 'jenkins-sonarqube-token')
+        }
+  }
+
+
+
+
+
+  steps {
+    batchFile('echo Hello World!')
+  }
+
 
 }
