@@ -1,10 +1,10 @@
 job('Example') {
-  description("SonarQube analysis")
+  description 'SonarQube analysis'
   properties {
-        githubProjectUrl('https://github.com/tgunness/jenkins-seeder')
+        githubProjectUrl 'https://github.com/tgunness/jenkins-seeder'
   }
-  discardOldBuilds { 
-    numToKeep(20)
+  logRotator {
+    numToKeep 20
   }
   concurrentBuild false
   steps {
