@@ -30,8 +30,7 @@ job('Example') {
     }
   }
   steps {
-    shell('''
-    #!/bin/bash -ex
+    shell('''#!/bin/bash -ex
     PROJECT_NAME="Xello.Feed.API"
     SONAR_PROJECT_KEY="Xello.Feed.API"
     DOCKER_TEMPLATE="dockerfile_netsdk60_sonarqube_jenkins_ci"
