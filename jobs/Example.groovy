@@ -6,9 +6,19 @@ job('Example') {
   logRotator {
     numToKeep 20
   }
-  label('linux-docker')
+  label 'linux-docker'
   concurrentBuild false
   steps {
     batchFile('echo Hello World!')
+  }
+  scm {
+    git {
+      remote {
+        url 'https://github.com/tgunness/jenkins-seeder.git'
+      }
+      branch 'refs/heads/main'
+      credentialsId 'ccbuilds@careercruising.com'
+    }
+      
   }
 }
