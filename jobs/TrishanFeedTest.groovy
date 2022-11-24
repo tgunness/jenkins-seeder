@@ -22,8 +22,8 @@ job('TrishanFeedTest') {
   }
   wrappers {
     credentialsBinding {
-        string('GITHUB_TOKEN', 'github_ccbuilds')
-        string('SONAR_TOKEN', 'c9609518-8875-48a3-8069-6b92013d7d1d')
+        string('GITHUB_TOKEN', 'c9609518-8875-48a3-8069-6b92013d7d1d')
+        string('SONAR_TOKEN', 'jenkins-sonarqube-token')
     }
     timeout {
       absolute(15)
