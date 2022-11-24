@@ -15,7 +15,7 @@ job('Example') {
     git {
       remote {
         url 'https://github.com/tgunness/jenkins-seeder.git'
-        credentials 'ccbuilds@careercruising.com'
+        credentials 'github_ccbuilds'
       }
       branch 'refs/heads/main'
     }
