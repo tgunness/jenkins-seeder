@@ -6,7 +6,7 @@ job('Example') {
   logRotator {
     numToKeep 20
   }
-  restrictToLabel 'linux-docker'
+  restrictToLabel('linux-docker')
   concurrentBuild false
   steps {
     batchFile('echo Hello World!')
