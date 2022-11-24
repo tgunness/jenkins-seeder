@@ -30,7 +30,7 @@ job('Example') {
     }
   }
   steps {
-    shell(readFileFromWorkspace('sonarh/sonar_netsdk60.sh'))
+    shell(readFileFromWorkspace('sonar/sonar_netsdk60.sh'))
   }
 
 
