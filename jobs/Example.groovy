@@ -21,18 +21,16 @@ job('Example') {
     githubPush()
   }
   wrappers {
-        credentialsBinding {
-            string('GITHUB_TOKEN', 'github_ccbuilds')
-            string('SONAR_TOKEN', 'jenkins-sonarqube-token')
-        }
+    credentialsBinding {
+        string('GITHUB_TOKEN', 'github_ccbuilds')
+        string('SONAR_TOKEN', 'c9609518-8875-48a3-8069-6b92013d7d1d')
+    }
+    timeout {
+      absolute(15)
+    }
   }
-
-
-
-
-
   steps {
-    batchFile('echo Hello World!')
+    shell(readFileFromWorkspace('sonarh/sonar_netsdk60.sh'))
   }
 
 
