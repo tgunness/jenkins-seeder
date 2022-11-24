@@ -6,7 +6,7 @@ def branch = 'refs/heads/main'
 job('Example') {
   description 'SonarQube analysis'
   properties {
-        githubProjectUrl githubProjectUrl
+        githubProjectUrl $githubProjectUrl
   }
   logRotator {
     numToKeep 20
@@ -16,10 +16,10 @@ job('Example') {
   scm {
     git {
       remote {
-        url gitUrl
+        url $gitUrl
         credentials 'github_ccbuilds'
       }
-      branch branch
+      branch $branch
     }      
   }
   triggers {
