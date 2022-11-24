@@ -1,6 +1,6 @@
 job('Example') {
   description("SonarQube analysis")
-  concurrentBuild false
+  concurrentBuild true
   steps {
     batchFile('echo Hello World!')
   }
